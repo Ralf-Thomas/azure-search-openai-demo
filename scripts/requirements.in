@@ -7,3 +7,4 @@ azure-storage-file-datalake
 openai[datalib]==0.28.1
 tiktoken
 tenacity
+uvicorn
