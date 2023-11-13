@@ -1,6 +1,16 @@
 import { useRef, useState, useEffect } from "react";
 import { Checkbox, Panel, DefaultButton, TextField, SpinButton, Dropdown, IDropdownOption } from "@fluentui/react";
 import { SparkleFilled } from "@fluentui/react-icons";
+
+import AI2svg from "../../assets/AI2.svg";
+export const AI2svgicon: React.FC = () => {
+    return (
+        <div>
+            <img src={AI2svg} alt="Answer Logo" width="100px" height="100px" />
+        </div>
+    );
+};
+
 import readNDJSONStream from "ndjson-readablestream";
 
 import styles from "./Chat.module.css";
@@ -235,10 +245,11 @@ const Chat = () => {
                 <div className={styles.chatContainer}>
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
-                            <SparkleFilled fontSize={"120px"} primaryFill={"rgba(115, 118, 225, 1)"} aria-hidden="true" aria-label="Chat logo" />
-                            <h1 className={styles.chatEmptyStateTitle}>Chat with Eviden Compliancy Officer</h1>
-                            <h2 className={styles.chatEmptyStateSubtitle}>Ask anything or try an example</h2>
-                            <ExampleList onExampleClicked={onExampleClicked} />
+                            <AI2svgicon aria-label="Chat logo" />
+                            <h2 className={styles.chatEmptyStateSubtitle}>Chat with our Eviden virtual Compliancy Officer</h2>
+                            <h3 className={styles.chatEmptyStateSubtitle}>
+                                Ask anything about Eviden Polices, Processes or Manuals ... \n Ask in any language you like ...
+                            </h3>
                         </div>
                     ) : (
                         <div className={styles.chatMessageStream}>
@@ -303,7 +314,7 @@ const Chat = () => {
                     <div className={styles.chatInput}>
                         <QuestionInput
                             clearOnSend
-                            placeholder="Type a new question (e.g. does my plan cover annual eye exams?)"
+                            placeholder="Ask any new question in any language ?"
                             disabled={isLoading}
                             onSend={question => makeApiRequest(question)}
                         />
