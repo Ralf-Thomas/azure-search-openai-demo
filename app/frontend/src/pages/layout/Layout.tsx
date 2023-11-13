@@ -8,41 +8,46 @@ import { useLogin } from "../../authConfig";
 
 import { LoginButton } from "../../components/LoginButton";
 
+import evidenlogowhite from "../../assets/EvidenLogo.png";
+
 const Layout = () => {
     return (
         <div className={styles.layout}>
             <header className={styles.header} role={"banner"}>
                 <div className={styles.headerContainer}>
-                    <Link to="/" className={styles.headerTitleContainer}>
+                    <Link
+                        to="https://atos365.sharepoint.com/sites/600003960/SitePages/OneCloudGPT---Compliancy-Officer-bot.aspx"
+                        className={styles.headerTitleContainer}
+                    >
+                        <img
+                            src={evidenlogowhite}
+                            alt="Eviden logo"
+                            aria-label="Link to OneCloud SharePoint for help"
+                            width="95px"
+                            height="35px"
+                            className={styles.evidenLogo}
+                        />
+
                         <h3 className={styles.headerTitle}>OneCloudGPT-4</h3>
                     </Link>
                     <nav>
                         <ul className={styles.headerNavList}>
                             <li>
                                 <NavLink to="/" className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}>
-                                    Chat
+                                    Chat &nbsp;
                                 </NavLink>
                             </li>
-                            <li className={styles.headerNavLeftMargin}>
-                                <NavLink to="/qa" className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}>
-                                    Ask a question
+                            <li>
+                                <NavLink
+                                    to="https://atos365.sharepoint.com/sites/600003960/SitePages/OneCloudGPT---Compliancy-Officer-bot.aspx"
+                                    className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}
+                                >
+                                    &nbsp; Help?
                                 </NavLink>
-                            </li>
-                            <li className={styles.headerNavLeftMargin}>
-                                <a href="https://aka.ms/entgptsearch" target={"_blank"} title="Github repository link">
-                                    <img
-                                        src={github}
-                                        alt="Github logo"
-                                        aria-label="Link to github repository"
-                                        width="20px"
-                                        height="20px"
-                                        className={styles.githubLogo}
-                                    />
-                                </a>
                             </li>
                         </ul>
                     </nav>
-                    <h4 className={styles.headerRightText}>Powered by Azure OpenAI + Cognitive Search</h4>
+                    <h4 className={styles.headerRightText}>Azure OpenAI GPT-4 + Cognitive Search</h4>
                     {useLogin && <LoginButton />}
                 </div>
             </header>
