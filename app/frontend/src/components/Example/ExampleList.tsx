@@ -12,7 +12,7 @@ const EXAMPLES: ExampleModel[] = [
         text: "what is scope of Operation Manual?",
         value: "what is scope of Operation Manual?"
     },
-    { text: "What are the Business Lines of Eviden?", value: "What are the Business Lines of Eviden?" },
+    { text: "What are the Business Lines for Operation Manual?", value: "What are the Business Lines for Operation Manual?" },
     { text: "What does a Project Manager do?", value: "What does a Project Manager do?" }
 ];
 
