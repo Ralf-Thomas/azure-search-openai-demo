@@ -246,15 +246,16 @@ const Chat = () => {
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
                             <AI2svgicon aria-label="Chat logo" />
-                            <h2 className={styles.chatEmptyStateSubtitle}>Chat with our Eviden OneCloud virtual Compliancy Officer</h2>
+                            <h2 className={styles.chatEmptyStateSubtitle}>Chat with our Eviden OneCloud GPT-4 Compliancy Office ...</h2>
                             <br />
-                            Ask me anything about Eviden Policies, Processes or Manuals ...
+                            Ask anything about Eviden Policies, Processes or Manuals ...
                             <br />
                             Answer is based on more than 250 Eviden Documents ...
                             <br />
                             Ask in any natrual language you like ...
                             <br />
                             <hr />
+                            <ExampleList onExampleClicked={onExampleClicked} />
                         </div>
                     ) : (
                         <div className={styles.chatMessageStream}>
