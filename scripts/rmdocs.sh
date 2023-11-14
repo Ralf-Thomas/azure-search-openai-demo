@@ -21,12 +21,18 @@ if [ -n "$AZURE_SEARCH_ANALYZER_NAME" ]; then
   searchAnalyzerNameArg="--searchanalyzername $AZURE_SEARCH_ANALYZER_NAME"
 fi
 
+# 
+# Add filename './data/filename.pdf' below to remove single file from Blob and Search-Index
+# change to -removeall to clean-up all
+#
+
 ./scripts/.venv/bin/python ./scripts/prepdocs.py \
-'./data/*' $adlsGen2StorageAccountArg $adlsGen2FilesystemArg $adlsGen2FilesystemPathArg $searchAnalyzerNameArg \
+'./data/MSF-U02-0009 CS TOP Checklist.pdf' $adlsGen2StorageAccountArg $adlsGen2FilesystemArg $adlsGen2FilesystemPathArg $searchAnalyzerNameArg \
 $aclArg  --storageaccount "$AZURE_STORAGE_ACCOUNT" \
 --container "$AZURE_STORAGE_CONTAINER" --searchservice "$AZURE_SEARCH_SERVICE" \
 --openaiservice "$AZURE_OPENAI_SERVICE" --openaideployment "$AZURE_OPENAI_EMB_DEPLOYMENT" \
 --openaimodelname "$AZURE_OPENAI_EMB_MODEL_NAME" --index "$AZURE_SEARCH_INDEX" \
 --formrecognizerservice "$AZURE_FORMRECOGNIZER_SERVICE" --openaimodelname "$AZURE_OPENAI_EMB_MODEL_NAME" \
 --tenantid "$AZURE_TENANT_ID" --openaihost "$OPENAI_HOST" \
---openaikey "$OPENAI_API_KEY" -v
+--openaikey "$OPENAI_API_KEY" -v \
+--remove
