@@ -248,12 +248,13 @@ const Chat = () => {
                             <AI2svgicon aria-label="Chat logo" />
                             <h2 className={styles.chatEmptyStateSubtitle}>Chat with our Eviden OneCloud GPT-4 Compliancy Office ...</h2>
                             <br />
-                            Ask anything about Eviden Policies, Processes or Manuals ...
+                            Ask anything in any language about Eviden Policies, Processes or Manuals ...
                             <br />
                             Answer is based on more than 250 Eviden Documents ...
                             <br />
-                            Ask in any natrual language you like ...
-                            <br />
+                            Or chat with GPT-4 about any topic you like ...
+                            <hr />
+                            <hr />
                             <hr />
                             <ExampleList onExampleClicked={onExampleClicked} />
                         </div>
