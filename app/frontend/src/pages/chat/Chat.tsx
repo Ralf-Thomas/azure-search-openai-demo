@@ -253,9 +253,12 @@ const Chat = () => {
                             Answer is based on more than 250 Eviden Documents ...
                             <br />
                             Or chat with GPT-4 about any topic you like ...
-                            <hr />
-                            <hr />
-                            <hr />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
                             <ExampleList onExampleClicked={onExampleClicked} />
                         </div>
                     ) : (
@@ -321,7 +324,7 @@ const Chat = () => {
                     <div className={styles.chatInput}>
                         <QuestionInput
                             clearOnSend
-                            placeholder="Ask any question in any natrual language ?"
+                            placeholder="Ask any question in any language ?"
                             disabled={isLoading}
                             onSend={question => makeApiRequest(question)}
                         />

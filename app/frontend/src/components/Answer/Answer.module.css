@@ -9,7 +9,7 @@
 }
 
 .answerLogo {
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .answerText {
@@ -32,7 +32,7 @@
 }
 
 .selected {
-    outline: 2px solid rgba(0, 45, 60, 1);
+    outline: 2px solid rgba(255, 109, 67, 1);
 }
 
 .citationLearnMore {

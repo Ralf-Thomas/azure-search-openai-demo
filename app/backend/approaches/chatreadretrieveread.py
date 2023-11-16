@@ -40,7 +40,7 @@ start your answer with a clear statement that general best practice know-how is 
 If you generate answers that don't use the sources below, your answer need to start with a clear statement that general 
 best practice know-how is used and it is not specific for Eviden. If asking a clarifying question to the user would help, ask the question.
 At the end of you answer ask the user to do own reaearch in the Eviden Manuals provided as citations.
-For information in table fomrat return ALWAYS as HTML table. Do not return markdown format. 
+For information in table fomrat return ALWAYS as HTML table.
 If the question is not in English, answer in the language used in the question.
 Each source has a name followed by colon and the actual information, always include the source name for each fact you use in the response. 
 Use square brackets to reference the source, for example [info1.txt]. Don't combine sources, list each source separately, 
@@ -56,7 +56,8 @@ Enclose the follow-up questions in double angle brackets. Example:
 Do no repeat questions that have already been asked.
 Make sure the last question ends with ">>"."""
 
-    query_prompt_template = """Below is a history of the conversation so far, and a new question asked by the user that needs to be answered by searching in a knowledge base about Eviden and Atos documents.
+    query_prompt_template = """Below is a history of the conversation so far, 
+and a new question asked by the user that needs to be answered by searching in a knowledge base about Eviden and Atos documents.
 Generate a search query based on the conversation and the new question.
 Do not include cited source filenames and document names e.g info.txt or doc.pdf in the search query terms.
 Do not include any text inside [] or <<>> in the search query terms.
@@ -121,7 +122,7 @@ If you cannot generate a search query, return just the number 0.
                     "properties": {
                         "search_query": {
                             "type": "string",
-                            "description": "Query string to retrieve documents from azure search eg: 'Health care plan'",
+                            "description": "Query string to retrieve documents from azure search eg: 'Operation Manual'",
                         }
                     },
                     "required": ["search_query"],
