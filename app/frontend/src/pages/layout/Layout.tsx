@@ -23,8 +23,8 @@ const Layout = () => {
                             src={evidenlogowhite}
                             alt="Eviden logo"
                             aria-label="Link to OneCloud SharePoint for help"
-                            width="95px"
-                            height="35px"
+                            width="90px"
+                            height="32px"
                             className={styles.evidenLogo}
                         />
 
@@ -32,11 +32,6 @@ const Layout = () => {
                     </Link>
                     <nav>
                         <ul className={styles.headerNavList}>
-                            <li>
-                                <NavLink to="/" className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}>
-                                    Chat &nbsp;
-                                </NavLink>
-                            </li>
                             <li>
                                 <NavLink
                                     to="https://atos365.sharepoint.com/sites/600003960/SitePages/OneCloudGPT---Compliancy-Officer-bot.aspx"
