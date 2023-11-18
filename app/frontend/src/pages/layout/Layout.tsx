@@ -39,7 +39,7 @@ const Layout = () => {
                                     to="https://atos365.sharepoint.com/sites/600003960/SitePages/OneCloudGPT---Compliancy-Officer-bot.aspx"
                                     className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}
                                 >
-                                    <img src={question} alt="Help Point" width="32px" height="32px" />
+                                    Help?
                                 </NavLink>
                             </li>
                         </ul>
