@@ -25,6 +25,10 @@
     text-decoration: none;
 }
 
+.headerTitleContainer:hover {
+    opacity: 0.6;
+}
+
 .headerLogo {
     height: 40px;
 }
@@ -44,15 +48,14 @@
 .headerNavPageLink {
     color: #f2f2f2;
     text-decoration: none;
-    opacity: 0.75;
+    opacity: 1;
     align-items: center;
-    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-    transition-duration: 500ms;
     transition-property: opacity;
 }
 
 .headerNavPageLink:hover {
-    opacity: 1;
+    opacity: 0.6;
+    text-decoration: underline;
 }
 
 .headerNavPageLinkActive {
@@ -65,8 +68,18 @@
 }
 
 .headerRightText {
+    display: flex;
+    align-items: center;
+    color: #f2f2f2;
+    text-decoration: none;
     font-weight: normal;
+    font-size: smaller;
     margin-left: 40px;
+}
+
+.headerRightText:hover {
+    opacity: 0.6;
+    text-decoration: underline;
 }
 
 .microsoftLogo {

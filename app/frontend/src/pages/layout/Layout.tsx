@@ -11,6 +11,7 @@ import { useLogin } from "../../authConfig";
 import { LoginButton } from "../../components/LoginButton";
 
 import evidenlogowhite from "../../assets/EvidenLogo.png";
+import { useMenuSplitGroupStyles_unstable } from "@fluentui/react-components";
 
 const Layout = () => {
     return (
@@ -29,7 +30,6 @@ const Layout = () => {
                             height="32px"
                             className={styles.evidenLogo}
                         />
-
                         <h3 className={styles.headerTitle}>OneCloudGPT-4</h3>
                     </Link>
                     <nav>
@@ -44,7 +44,9 @@ const Layout = () => {
                             </li>
                         </ul>
                     </nav>
-                    <h4 className={styles.headerRightText}>Azure OpenAI GPT-4 + Cognitive Search</h4>
+                    <Link to="https://github.com/Azure-Samples/azure-search-openai-demo" className={styles.headerRightText}>
+                        <h4 className={styles.headerRightText}> Azure OpenAI GPT-4 + Cognitive Search</h4>
+                    </Link>
                     {useLogin && <LoginButton />}
                 </div>
             </header>
