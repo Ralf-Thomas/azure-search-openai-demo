@@ -2,6 +2,8 @@ import { Outlet, NavLink, Link } from "react-router-dom";
 
 import github from "../../assets/github.svg";
 
+import question from "../../assets/Question.svg";
+
 import styles from "./Layout.module.css";
 
 import { useLogin } from "../../authConfig";
@@ -37,7 +39,7 @@ const Layout = () => {
                                     to="https://atos365.sharepoint.com/sites/600003960/SitePages/OneCloudGPT---Compliancy-Officer-bot.aspx"
                                     className={({ isActive }) => (isActive ? styles.headerNavPageLinkActive : styles.headerNavPageLink)}
                                 >
-                                    &nbsp; Help?
+                                    <img src={question} alt="Help Point" width="32px" height="32px" />
                                 </NavLink>
                             </li>
                         </ul>

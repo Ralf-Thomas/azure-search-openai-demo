@@ -38,13 +38,14 @@
     display: flex;
     list-style: none;
     padding-left: 0;
+    align-items: center;
 }
 
 .headerNavPageLink {
     color: #f2f2f2;
     text-decoration: none;
     opacity: 0.75;
-
+    align-items: center;
     transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
     transition-duration: 500ms;
     transition-property: opacity;
@@ -52,7 +53,6 @@
 
 .headerNavPageLink:hover {
     opacity: 1;
-    text-decoration: underline;
 }
 
 .headerNavPageLinkActive {
